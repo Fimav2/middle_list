@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector <char> itc_strtlist(string str){
+vector <char> itc_strtlist(string str){//1
 
     vector <char> mass;
     for(int i = 0; i < str.size();i++)
@@ -13,7 +13,7 @@ vector <char> itc_strtlist(string str){
 
     return mass;
 }
-string itc_join(vector <char> lst, string sep){
+string itc_join(vector <char> lst, string sep){//2
     string str = "";
     for(int i = 0; i < lst.size()-1;i++){
         str = str + lst[i] + sep;
@@ -23,7 +23,7 @@ string itc_join(vector <char> lst, string sep){
     return str;
 }
 
-string itc_rmstrspc(string str){
+string itc_rmstrspc(string str){//3
     string new_str="";
     for(int i = 0; i < str.size();i++)
         if(str[i] != ' ')
@@ -32,4 +32,24 @@ string itc_rmstrspc(string str){
     return new_str;
 
 }
+
+string itc_rmstrchar(string str, string less){//4
+    string new_str = "";
+    vector <char> mass;
+    for(int i = 0;i < str.size();i++)
+    if(str[i] == less[i]){
+        new_str[i] = str[i] - less[i];
+    }
+
+            cout << new_str;
+}
+long itc_sumlst(const vector <int> &lst){//5
+    int sym = 0;
+        for(int i = 0;i < lst.size();i++)
+            sym = lst[i] + sym;
+
+    return sym;
+
+}
+
 
