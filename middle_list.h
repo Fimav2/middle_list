@@ -23,7 +23,7 @@ void itc_odd_even_separator_lst(const vector <int> &lst, vector <int> &lst1, vec
 
 void itc_pos_neg_separator_lst(const vector <int> &lst, vector <int> &lst1, vector <int> &lst2, vector <int> &lst3);//9
 
-itc_odd_even_analysis_lst(const vector <int> &lst);//10
+void itc_odd_even_analysis_lst(const vector <int> &lst);//10
 
 void itc_pos_neg_analysis_lst(const vector <int> &lst);//11
 
