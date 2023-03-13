@@ -34,15 +34,24 @@ string itc_rmstrspc(string str){//3
 }
 
 string itc_rmstrchar(string str, string less){//4
-    string new_str = "";
-    vector <char> mass;
-    for(int i = 0;i < str.size();i++)
-    if(str[i] == less[i]){
-        new_str[i] = str[i] - less[i];
-    }
 
-            cout << new_str;
+
+    string new_str = "";
+    vector <int> mass;
+        for(int i = 0; i < less.size();i++)
+            mass.push_back(less[i]);
+
+         for(int j = 0; j < str.size();j++){
+             int g = 0;
+                for(int i = 0; i < mass.size();i++)
+                    if (str[j] == mass[i])
+                g++;
+            if (g == 0)
+            new_str = new_str + str[j];
+    }
+    return new_str;
 }
+
 long itc_sumlst(const vector <int> &lst){//5
     int sym = 0;
         for(int i = 0;i < lst.size();i++)
