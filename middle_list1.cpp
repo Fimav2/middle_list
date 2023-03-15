@@ -8,8 +8,8 @@ long itc_sum_even_lst(const vector <int> &lst){//6
 
 
 
-      int sym = 0;
-      for(int i = 1; i < lst.size(); i+=2)
+      long sym = 0;
+      for(int i = 0; i < lst.size(); i+=2)
         sym = lst[i] + sym;
 
 
